@@ -1,0 +1,26 @@
+module,date,lecture,notes,slides,notebooks
+algoritmica,"2025-09-22T8:00:00+10:30","Algoritmi",,"static_files/lectures/algoritmica/1.pdf","static_files/lectures/algoritmica/weights.ipynb"
+algoritmica,"2025-09-24T8:00:00+10:30","Classi di costo",,"static_files/lectures/algoritmica/2.pdf","static_files/lectures/algoritmica/2.ipynb"
+algoritmica,"2025-09-29T8:00:00+10:30","Ricerca",,"static_files/lectures/algoritmica/3.pdf","static_files/lectures/algoritmica/search.ipynb"
+algoritmica,"2025-10-01T8:00:00+10:30","Ordinamento",,"static_files/lectures/algoritmica/4.pdf","static_files/lectures/algoritmica/sort.ipynb"
+algoritmica,"2025-10-06T8:00:00+10:30","Programmazione dinamica",,"static_files/lectures/algoritmica/5.pdf",
+algoritmica,"2025-10-08T8:00:00+10:30","Allineamento",,"static_files/lectures/algoritmica/6.pdf","static_files/lectures/algoritmica/edit_distance.ipynb"
+algoritmica,"2025-10-13T8:00:00+10:30","Allineamento con gap",,"static_files/lectures/algoritmica/7.pdf","static_files/lectures/algoritmica/edit_distance.ipynb"
+algoritmica,"2025-10-15T8:00:00+10:30","Alberi",,"static_files/lectures/algoritmica/8.pdf",
+algoritmica,"2025-10-20T8:00:00+10:30","Simulazione compitino",,,
+algoritmica,"2025-10-27T8:00:00+10:30","???",,,
+algoritmica,"2025-10-29T8:00:00+10:30","???",,,
+programmazione,"2025-11-03T8:00:00+10:30","Introduzione e valori",,"static_files/lectures/programmazione/1.pdf","https://github.com/Informatica-per-le-biotecnologie-UniPI/biotech25/blob/master/values_and_types.ipynb"
+programmazione,"2025-11-05T8:00:00+10:30","Valori ed espressioni",,"static_files/lectures/programmazione/1.pdf","https://github.com/Informatica-per-le-biotecnologie-UniPI/biotech25/blob/master/values_and_types.ipynb"
+programmazione,"2025-11-10T8:00:00+10:30","Valori ed espressioni",Esercitazione,,
+programmazione,"2025-11-12T8:00:00+10:30","Costrutti",,"static_files/lectures/programmazione/2.pdf","https://github.com/Informatica-per-le-biotecnologie-UniPI/biotech25/blob/master/constructs.ipynb"
+programmazione,"2025-11-17T8:00:00+10:30","Costrutti",,"static_files/lectures/programmazione/2.pdf","https://github.com/Informatica-per-le-biotecnologie-UniPI/biotech25/blob/master/constructs.ipynb"
+programmazione,"2025-11-19T8:00:00+10:30","Costrutti",Esercitazione,"static_files/lectures/programmazione/.pdf","https://github.com/Informatica-per-le-biotecnologie-UniPI/biotech25/"
+programmazione,"2025-11-24T8:00:00+10:30","Funzioni",,"static_files/lectures/programmazione/3.pdf","https://github.com/Informatica-per-le-biotecnologie-UniPI/biotech25/blob/master/functions.ipynb"
+programmazione,"2025-11-26T8:00:00+10:30","Funzioni",Esercitazione,"static_files/lectures/programmazione/.pdf",
+programmazione,"2025-12-01T8:00:00+10:30","Funzioni",Esercitazione,"static_files/lectures/programmazione/.pdf",
+programmazione,"2025-12-03T8:00:00+10:30","Classi",,"static_files/lectures/programmazione/4.pdf","https://github.com/Informatica-per-le-biotecnologie-UniPI/biotech25/blob/master/classes.ipynb"
+programmazione,"2025-12-08T8:00:00+10:30","Classi",,"static_files/lectures/programmazione/4.pdf","https://github.com/Informatica-per-le-biotecnologie-UniPI/biotech25/blob/master/classes_advanced.ipynb"
+programmazione,"2025-12-15T8:00:00+10:30","Esercitazione",,
+programmazione,"2025-12-17T8:00:00+10:30","Esercitazione",,
+programmazione,"2025-12-10T8:00:00+10:30","Moduli",,,"https://github.com/Informatica-per-le-biotecnologie-UniPI/biotech25/blob/master/classes.ipynb"
