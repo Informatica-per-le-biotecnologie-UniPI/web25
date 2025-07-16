@@ -3,7 +3,7 @@ course_name: Informatica per le biotecnologie
 course_description: "Introduzione all'algoritmica e alla programmazione"
 course_semester: "Primo semestre 2025"
 
-baseurl: "btcl" # the subpath of your site, e.g. /blog/
+baseurl: "/btcl" # the subpath of your site, e.g. /blog/
 url: "" # the base hostname & protocol for your site
 
 schoolname: "University of Pisa"
