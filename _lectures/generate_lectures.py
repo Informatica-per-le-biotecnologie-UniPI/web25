@@ -24,7 +24,7 @@ thumbnail: /static_files/presentations/lec.jpg
       name: notebook
     """
 
-    base += "\n---"
+    base += "\nhide_from_announcments: true\n---"
     
     if isinstance(row["notes"], str):
         base += f"\n\n{row['notes']}"

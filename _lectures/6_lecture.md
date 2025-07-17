@@ -1,6 +1,6 @@
 ---
 type: lecture
-date: 2025-10-13T8:00:00+10:30
+date: 2025-10-13T10:30:00
 title: Allineamento con gap
 thumbnail: /static_files/presentations/lec.jpg
 links:
@@ -10,4 +10,5 @@ links:
     - url: static_files/lectures/algoritmica/7.pdf
       name: notebook
     
+hide_from_announcments: true
 ---

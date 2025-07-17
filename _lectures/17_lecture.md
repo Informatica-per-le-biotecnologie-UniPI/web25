@@ -1,6 +1,6 @@
 ---
 type: lecture
-date: 2025-11-24T8:00:00+10:30
+date: 2025-11-24T10:30:00
 title: Funzioni
 thumbnail: /static_files/presentations/lec.jpg
 links:
@@ -10,4 +10,5 @@ links:
     - url: static_files/lectures/programmazione/3.pdf
       name: notebook
     
+hide_from_announcments: true
 ---
