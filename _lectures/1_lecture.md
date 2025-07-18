@@ -1,7 +1,7 @@
 ---
 type: lecture
 date: 2025-09-24T10:30:00
-title: Classi di costo
+title: Complessità computazionale
 lecture_type: Lezione
 thumbnail: /static_files/presentations/lec.jpg
 links:

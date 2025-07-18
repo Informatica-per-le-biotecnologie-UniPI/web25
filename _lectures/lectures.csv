@@ -1,6 +1,6 @@
 lecture_type,module,date,lecture,notes,slides,notebooks
 "Lezione",algoritmica,"2025-09-22T10:30:00","Algoritmi",,"static_files/lectures/algoritmica/1.pdf","static_files/lectures/algoritmica/weights.ipynb"
-"Lezione",algoritmica,"2025-09-24T10:30:00","Classi di costo",,"static_files/lectures/algoritmica/2.pdf",
+"Lezione",algoritmica,"2025-09-24T10:30:00","Complessità computazionale",,"static_files/lectures/algoritmica/2.pdf",
 "Lezione",algoritmica,"2025-09-29T10:30:00","Ricerca",,"static_files/lectures/algoritmica/3.pdf","static_files/lectures/algoritmica/search.ipynb"
 "Lezione",algoritmica,"2025-10-01T10:30:00","Ordinamento",,"static_files/lectures/algoritmica/4.pdf","static_files/lectures/algoritmica/sort.ipynb"
 "Lezione",algoritmica,"2025-10-06T10:30:00","Programmazione dinamica",,"static_files/lectures/algoritmica/5.pdf",

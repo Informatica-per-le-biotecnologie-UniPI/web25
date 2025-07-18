@@ -3,14 +3,14 @@ course_name: Informatica per le biotecnologie
 course_description: "Introduzione all'algoritmica e alla programmazione"
 course_semester: "Primo semestre 2025"
 
-baseurl: "/btcl/" # the subpath of your site, e.g. /blog/
+baseurl: "/web25/" # the subpath of your site, e.g. /blog/
 url: "" # the base hostname & protocol for your site
 
 schoolname: "University of Pisa"
 schoolurl: "https://www.biologia.unipi.it/"
 
 address: |
-    Largo B. Pontecorvo, 3, Pisa
+    Via Luca Ghini, 13, Pisa
 
 # Set your Google Analytics tracking ID (set up yours at http://www.google.com/analytics/)
 # google_analytics: UA-XXXXXXXX-X

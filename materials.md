@@ -8,7 +8,7 @@ permalink: /materiali/
 
 Dispense disponibili di seguito:
 
-- [Algoritmi, classi di costo, ricerca, ordinamento, programmazione dinamica]({{ site.baseurl }}static_files/lectures/algoritmica/dispense%200-6.pdf)
+- [Algoritmi, complessità computazionale, ricerca, ordinamento, programmazione dinamica]({{ site.baseurl }}static_files/lectures/algoritmica/dispense%200-6.pdf)
 - [Allineamento, alberi](/static_files/lectures/algoritmica/dispense%207-10.pdf)
 
 ---
