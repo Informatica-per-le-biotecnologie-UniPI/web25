@@ -1,7 +1,7 @@
 instructors:
-  - name: Fabrizio Luccio
-    profile_pic: _images/pp/luccio.jpg
-    webpage: https://unimap.unipi.it/cercapersone/dettaglio.php?ri=4644
   - name: Mattia Setzu
     profile_pic: /_images/pp/setzu.jpg
     webpage: https://unimap.unipi.it/cercapersone/dettaglio.php?ri=177323
+  - name: Fabrizio Luccio
+    profile_pic: _images/pp/luccio.jpg
+    webpage: https://unimap.unipi.it/cercapersone/dettaglio.php?ri=4644

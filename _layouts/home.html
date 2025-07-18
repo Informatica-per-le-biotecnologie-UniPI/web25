@@ -8,11 +8,9 @@ layout: default
 
     {% include announcements.html %}
     <br />
-
-    <h2>Course Description</h2>
-    <p>{{ site.course_description }}</p>
     
-    {{ content }}
+    Il corso di Informatica per le Biotecnologie introduce lo studente al pensiero computazionale e algoritmico.
+    Il corso si compone di un modulo di algoritmica, e uno di programmazione.
 
     <br>
     <div>
@@ -24,7 +22,7 @@ layout: default
             </div> -->
 
             <div class="profile-pic-gallary ">
-                <h2>Instructors</h2>
+                <h2>Docenti</h2>
                 {% for ins in site.data.people.instructors %}
                 <div class="image--cover-container">
                     <img src="{{ins.profile_pic | prepend: site.baseurl }}" class="image--cover">

@@ -1,22 +1,24 @@
 ---
 layout: page
-title: Materials
-permalink: /materials/
+title: Materiali
+permalink: /materiali/
 ---
 
 # Algoritmica
 
 Dispense disponibili di seguito:
 
-- [Algoritmi, classi di costo, ricerca, ordinamento, programmazione dinamica](static_files/lectures/algoritmica/dispense%200-6.pdf)
-- [Allineamento, alberi](static_files/lectures/algoritmica/dispense%207-10.pdf)
+- [Algoritmi, classi di costo, ricerca, ordinamento, programmazione dinamica]({{ site.baseurl }}static_files/lectures/algoritmica/dispense%200-6.pdf)
+- [Allineamento, alberi](/static_files/lectures/algoritmica/dispense%207-10.pdf)
+
+---
 
 # Programmazione
 
 ## Ambienti di sviluppo
 
-- [Pycharm](https://www.jetbrains.com/pycharm/)
-- [Google Colab](https://colab.research.google.com/)
+- [Pycharm](https://www.jetbrains.com/pycharm/). Sufficiente la versione community.
+- [Google Colab](https://colab.research.google.com/).
 
 ## Testo
 

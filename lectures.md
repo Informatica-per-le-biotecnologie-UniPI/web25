@@ -1,5 +1,5 @@
 ---
 layout: lectures
-title: Lectures
-permalink: /lectures/
+title: Lezioni
+permalink: /lezioni/
 ---

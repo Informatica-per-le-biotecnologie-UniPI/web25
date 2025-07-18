@@ -1,6 +1,8 @@
 ---
 layout: assignments
-title: Assignments
-permalink: /assignments/
+title: Esercitazioni
+permalink: /esercitazioni/
 ---
-You can download the assignments here. Also check out each assignment page for any additional info.
+
+Le esercitazioni accompagnano passo passo l'apprendimento della programmazione.
+È **fortemente consigliato** lavorarci durante le esercitazioni in aula, da soli o con il proprio gruppo di studio, e sfruttare ricevimenti in caso di dubbi.
