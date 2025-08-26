@@ -5,9 +5,9 @@ title: Algoritmi
 lecture_type: Lezione
 thumbnail: /static_files/presentations/lec.jpg
 links:
-- url: static_files/lectures/algoritmica/1.pdf
+- url: https://github.com/Informatica-per-le-biotecnologie-UniPI/web25/blob/teaching/algoritmica/1.pdf
   name: slides
-- url: static_files/lectures/algoritmica/weights.ipynb
+- url: https://colab.research.google.com/github/Informatica-per-le-biotecnologie-UniPI/web25/blob/teaching/algoritmica/weights.ipynb
   name: notebook
 hide_from_announcments: true
 ---

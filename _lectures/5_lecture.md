@@ -5,9 +5,9 @@ title: Allineamento
 lecture_type: Lezione
 thumbnail: /static_files/presentations/lec.jpg
 links:
-- url: static_files/lectures/algoritmica/6.pdf
+- url: https://github.com/Informatica-per-le-biotecnologie-UniPI/web25/blob/teaching/algoritmica/6.pdf
   name: slides
-- url: static_files/lectures/algoritmica/edit_distance.ipynb
+- url: https://colab.research.google.com/github/Informatica-per-le-biotecnologie-UniPI/web25/blob/teaching/algoritmica/edit_distance.ipynb
   name: notebook
 hide_from_announcments: true
 ---

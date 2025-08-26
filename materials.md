@@ -20,6 +20,8 @@ Dispense disponibili di seguito:
 - [Pycharm](https://www.jetbrains.com/pycharm/). Sufficiente la versione community.
 - [Google Colab](https://colab.research.google.com/).
 
+Nota: per modificare i notebook di esempio sul modulo di algoritmica avrai bisogno di farne una copia. Dal menu file seleziona la voce corrispondente.
+
 ## Testo
 
 - [Pensare in Python, Allen Downey.](https://web.unica.it/static/resources/cms/documents/thinkpython_italian.pdf)

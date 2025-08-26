@@ -5,9 +5,9 @@ title: Ordinamento
 lecture_type: Lezione
 thumbnail: /static_files/presentations/lec.jpg
 links:
-- url: static_files/lectures/algoritmica/4.pdf
+- url: https://github.com/Informatica-per-le-biotecnologie-UniPI/web25/blob/teaching/algoritmica/4.pdf
   name: slides
-- url: static_files/lectures/algoritmica/sort.ipynb
+- url: https://colab.research.google.com/github/Informatica-per-le-biotecnologie-UniPI/web25/blob/teaching/algoritmica/sort.ipynb
   name: notebook
 hide_from_announcments: true
 ---

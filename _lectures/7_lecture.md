@@ -5,7 +5,7 @@ title: Alberi
 lecture_type: Lezione
 thumbnail: /static_files/presentations/lec.jpg
 links:
-- url: static_files/lectures/algoritmica/8.pdf
+- url: https://github.com/Informatica-per-le-biotecnologie-UniPI/web25/blob/teaching/algoritmica/8.pdf
   name: slides
 hide_from_announcments: true
 ---
