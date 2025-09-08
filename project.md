@@ -16,7 +16,7 @@ L'esame si compone di due moduli, uno di algoritmica e uno di programmazione. I 
 ## FAQ
 
 - **Come viene calcolato il voto?** Media aritmetica dei voti su due moduli. Entrambi devono essere sufficienti.
-- **Quando vengono consegnati i testi dei progetti?** Tipicamente una settimana prima della scadenza
+- **Quando vengono consegnati i testi dei progetti?** Tipicamente una settimana prima della scadenza.
 - **Devo iscrivermi all'appello per consegnare il progetto?** Si.
 
 
