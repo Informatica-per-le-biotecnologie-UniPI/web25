@@ -1,24 +1,34 @@
 ---
 layout: page
-title: Progetti
-permalink: /progetti/
+title: Esame
+permalink: /esame/
 ---
 
 <script>
 	$(document).ready(function(){ $(".menu .item").tab(); });
 </script>
 
-# Esame
-
 L'esame si compone di due moduli, uno di algoritmica e uno di programmazione. I due possono essere sostenuti in appelli separati, ma all'interno di uno stesso anno accademico. Il modulo di algoritmica prevede un compito scritto, quello di programmazione un progetto da fare in gruppi, seguito da discussione orale.
 
 
 ## FAQ
 
-- **Come viene calcolato il voto?** Media aritmetica dei voti su due moduli. Entrambi devono essere sufficienti.
-- **Quando vengono consegnati i testi dei progetti?** Tipicamente una settimana prima della scadenza.
+### Esame
+- **Come viene calcolato il voto?** Media aritmetica dei voti su due moduli. Entrambi devono essere sufficienti. Nota: il modulo di algoritmica viene valutato in 15-esimi, poi moltiplicato per 2 per il calcolo.
+- **Posso dare i due moduli separatamente?** Si, ma entro lo stesso anno accademico. Se uno studente non sostiene con profitto entrambi i moduli tra l'appello di ottobre (compreso) e l'appello di settembre dell'anno successivo (compreso), dovrà sostenere nuovamente entrambi i moduli.
+- **Per dare un modulo devo aver passato l'altro?** No, i due moduli sono indipendenti. Si consiglia comunque di studiare prima il modulo di algoritmica.
+
+### Progetto
+- **Quando vengono consegnati i testi dei progetti?** Tipicamente una settimana prima dell'appello.
 - **Devo iscrivermi all'appello per consegnare il progetto?** Si.
 
+### Lezioni
+
+- **Sono previsti laboratori aggiuntivi?** No, le lezioni seguono il calendario indicato. Studenti interessati a chiarimenti o approfondimenti possono contattare i docenti e usufruire del ricevimento (riferimenti su Unimap).
+- **Devo portare il computer a lezione?** Solo per il modulo di programmazione.
+- **Dove trovo i programmi da installare?** Pagina `Materiali`.
+
+---
 
 # Progetti
 

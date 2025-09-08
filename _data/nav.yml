@@ -15,8 +15,8 @@ items:
   name: Esercitazioni
   icon_class: fas fa-user-graduate
 
-- url: /progetti/
-  name: Progetti
+- url: /esame/
+  name: Esame
   icon_class: fas fa-user-graduate
 
 - url: /materiali/
