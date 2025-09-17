@@ -8,25 +8,35 @@ permalink: /esame/
 	$(document).ready(function(){ $(".menu .item").tab(); });
 </script>
 
-L'esame si compone di due moduli, uno di algoritmica e uno di programmazione. I due possono essere sostenuti in appelli separati, ma all'interno di uno stesso anno accademico. Il modulo di algoritmica prevede un compito scritto, quello di programmazione un progetto da fare in gruppi, seguito da discussione orale.
+L'esame si compone di due moduli, uno di algoritmica e uno di programmazione. I due possono essere sostenuti in appelli separati, ma all'interno di uno stesso anno accademico. Il modulo di algoritmica prevede un compito scritto, quello di programmazione un progetto da fare in gruppi da 2-3 studenti, seguito da discussione orale.
 
 
 ## FAQ
 
 ### Esame
+
+- **Dove/Quando vengono pubblicati i voti?** In [questo sheet](https://docs.google.com/spreadsheets/d/1sceV5cGmsFAPHo4SDdtfjNyHVMBFmWezQ56HtSMShAU/edit?usp=sharing). Per i progetti, i voti verranno pubblicati 1/2 giorni prima dell'orale, con avviso sulla bacheca del sito.
 - **Come viene calcolato il voto?** Media aritmetica dei voti su due moduli. Entrambi devono essere sufficienti. Nota: il modulo di algoritmica viene valutato in 15-esimi, poi moltiplicato per 2 per il calcolo.
 - **Posso dare i due moduli separatamente?** Si, ma entro lo stesso anno accademico. Se uno studente non sostiene con profitto entrambi i moduli tra l'appello di ottobre (compreso) e l'appello di settembre dell'anno successivo (compreso), dovrà sostenere nuovamente entrambi i moduli.
 - **Per dare un modulo devo aver passato l'altro?** No, i due moduli sono indipendenti. Si consiglia comunque di studiare prima il modulo di algoritmica.
+- **Dove trovo il Dipartimento di Informatica?** [Edificio C del Polo Fibonacci](https://maps.app.goo.gl/7KCceYCRTwNGPDMq9), secondo piano.
+- **Dove trovo la Aula Riunioni Est/Ovest?** Chiedi nella portineria del dipartimento, o consulta [la mappa online](https://di.unipi.it/mappa-dipartimento/).
 
 ### Progetto
 - **Quando vengono consegnati i testi dei progetti?** Tipicamente una settimana prima dell'appello.
 - **Devo iscrivermi all'appello per consegnare il progetto?** Si.
+- **Per l'orale devo portare il computer?** Non è necessario.
+
 
 ### Lezioni
 
 - **Sono previsti laboratori aggiuntivi?** No, le lezioni seguono il calendario indicato. Studenti interessati a chiarimenti o approfondimenti possono contattare i docenti e usufruire del ricevimento (riferimenti su Unimap).
 - **Devo portare il computer a lezione?** Solo per il modulo di programmazione.
 - **Dove trovo i programmi da installare?** Pagina `Materiali`.
+
+### Altro
+
+- **Dove trovo il gruppo Teams?** [Qui](https://teams.microsoft.com/l/team/19%3AjDZbg-1U0hUSzpYOsEoN00_TuxFkLu-vEt9hR5fyPJk1%40thread.tacv2/conversations?groupId=475fb31f-ea24-41c1-abb0-97226190f015&tenantId=c7456b31-a220-47f5-be52-473828670aa1).
 
 ---
 

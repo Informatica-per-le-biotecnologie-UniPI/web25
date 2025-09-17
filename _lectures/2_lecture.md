@@ -4,6 +4,7 @@ date: 2025-09-29T10:30:00
 title: Ricerca
 lecture_type: Lezione
 thumbnail: /static_files/presentations/lec.jpg
+hide_from_calendar: false
 links:
 - url: https://github.com/Informatica-per-le-biotecnologie-UniPI/web25/blob/teaching/algoritmica/3.pdf
   name: slides

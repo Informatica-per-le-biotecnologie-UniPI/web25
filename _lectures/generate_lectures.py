@@ -10,6 +10,7 @@ date: {row['date']}
 title: {row['lecture']}
 lecture_type: {row['lecture_type']}
 thumbnail: /static_files/presentations/lec.jpg
+hide_from_calendar: false
 """
 
     base += "links:\n"

@@ -18,9 +18,9 @@ Indicazioni complete sul calendario del primo semestre disponibili sul <a href="
 <div class="home">
     <ul class="responsive-table" style="margin-left: 0;">
         <li class="table-header">
-            <div class="col col-1">Event</div>
-            <div class="col col-1-2">Date</div>
-            <div class="col col-2">Description</div>
+            <div class="col col-1">Data</div>
+            <div class="col col-1-2">Tipologia</div>
+            <div class="col col-2">Descrizione</div>
             <!-- <div class="col col-4">Course Material</div> -->
         </li>
         
@@ -29,9 +29,12 @@ Indicazioni complete sul calendario del primo semestre disponibili sul <a href="
         {% assign all_events_sorted = all_events | sort: 'date' %}
 
         {% for event in all_events_sorted %}
+        {% if event.hide_from_calendar %}
+        {% else %}
         <li class="table-row table-row-{{ event.type}}">
             {% include schedule_row_{{ event.type }}.html event=event %}
         </li>
+        {% endif %}
         {% endfor %}
 
     </ul>
