@@ -1,6 +1,6 @@
 ---
 type: lecture
-date: 2025-10-08T10:30:00
+date: 2025-10-13T10:30:00
 title: Allineamento
 lecture_type: Lezione
 thumbnail: /static_files/presentations/lec.jpg

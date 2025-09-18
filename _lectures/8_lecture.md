@@ -1,8 +1,8 @@
 ---
 type: lecture
-date: 2025-10-20T10:30:00
+date: 2025-10-22T10:30:00
 title: Simulazione compitino
-lecture_type: Esercitazione
+lecture_type: Lezione
 thumbnail: /static_files/presentations/lec.jpg
 hide_from_calendar: false
 links:

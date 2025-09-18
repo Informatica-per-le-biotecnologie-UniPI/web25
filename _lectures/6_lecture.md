@@ -1,6 +1,6 @@
 ---
 type: lecture
-date: 2025-10-13T10:30:00
+date: 2025-10-15T10:30:00
 title: Allineamento con gap
 lecture_type: Lezione
 thumbnail: /static_files/presentations/lec.jpg
