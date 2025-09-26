@@ -1,7 +1,7 @@
 ---
 type: lecture
 date: 2025-12-17T10:30:00
-title: nan
+title: Classi
 lecture_type: Esercitazione
 thumbnail: /static_files/presentations/lec.jpg
 hide_from_calendar: false
