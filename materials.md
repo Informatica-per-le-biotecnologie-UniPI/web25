@@ -9,7 +9,7 @@ permalink: /materiali/
 Dispense disponibili di seguito:
 
 - [Algoritmi, complessità computazionale, ricerca, ordinamento, programmazione dinamica]({{ site.baseurl }}static_files/lectures/algoritmica/dispense%200-6.pdf)
-- [Allineamento, alberi](/static_files/lectures/algoritmica/dispense%207-10.pdf)
+- [Allineamento, alberi]({{ site.baseurl }}static_files/lectures/algoritmica/dispense%207-10.pdf)
 
 ---
 
