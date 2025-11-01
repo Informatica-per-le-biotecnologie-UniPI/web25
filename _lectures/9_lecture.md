@@ -1,7 +1,7 @@
 ---
 type: lecture
 date: 2025-11-03T10:30:00
-title: Introduzione e valori
+title: Introduzione e valori. Visualizzazione compitini a fine lezione
 lecture_type: Lezione
 thumbnail: /static_files/presentations/lec.jpg
 hide_from_calendar: false
