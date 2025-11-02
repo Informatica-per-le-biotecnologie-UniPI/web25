@@ -1,0 +1,13 @@
+LD_LIBRARY_PATH=.:/nix/store/jriyf2i0vc5yhcycsnclh5kpzpg9y7pc-ruby-3.3.9/lib:/nix/store/ig6pigsqc8hycanp3x2fihxp2jdm6jvr-pipewire-1.4.7-jack/lib "gcc -o conftest -I/nix/store/jriyf2i0vc5yhcycsnclh5kpzpg9y7pc-ruby-3.3.9/include/ruby-3.3.0/x86_64-linux -I/nix/store/jriyf2i0vc5yhcycsnclh5kpzpg9y7pc-ruby-3.3.9/include/ruby-3.3.0/ruby/backward -I/nix/store/jriyf2i0vc5yhcycsnclh5kpzpg9y7pc-ruby-3.3.9/include/ruby-3.3.0 -I.    -O3 -fPIC conftest.c  -L. -L/nix/store/jriyf2i0vc5yhcycsnclh5kpzpg9y7pc-ruby-3.3.9/lib -Wl,-rpath,/nix/store/jriyf2i0vc5yhcycsnclh5kpzpg9y7pc-ruby-3.3.9/lib -L. -fstack-protector-strong -rdynamic -Wl,-export-dynamic -Wl,--no-as-needed     -Wl,-rpath,/nix/store/jriyf2i0vc5yhcycsnclh5kpzpg9y7pc-ruby-3.3.9/lib -L/nix/store/jriyf2i0vc5yhcycsnclh5kpzpg9y7pc-ruby-3.3.9/lib -lruby-3.3.9  -lm -lpthread  -lc"
+gcc: fatal error: cannot execute ‘as’: posix_spawnp: No such file or directory
+compilation terminated.
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main(int argc, char **argv)
+4: {
+5:   return !!argv[argc];
+6: }
+/* end */
+

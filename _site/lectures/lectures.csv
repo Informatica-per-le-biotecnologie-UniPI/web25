@@ -1,0 +1,24 @@
+lecture_type,module,date,lecture,notes,slides,notebooks
+"Lezione",algoritmica,"2025-09-24T10:30:00","Algoritmi",,"https://github.com/Informatica-per-le-biotecnologie-UniPI/web25/blob/teaching/algoritmica/1.pdf","https://colab.research.google.com/github/Informatica-per-le-biotecnologie-UniPI/web25/blob/teaching/algoritmica/weights.ipynb"
+"Lezione",algoritmica,"2025-09-29T10:30:00","Complessità computazionale",,"https://github.com/Informatica-per-le-biotecnologie-UniPI/web25/blob/teaching/algoritmica/2.pdf",
+"Lezione",algoritmica,"2025-10-01T10:30:00","Ricerca",,"https://github.com/Informatica-per-le-biotecnologie-UniPI/web25/blob/teaching/algoritmica/3.pdf","https://colab.research.google.com/github/Informatica-per-le-biotecnologie-UniPI/web25/blob/teaching/algoritmica/search.ipynb"
+"Lezione",algoritmica,"2025-10-06T10:30:00","Ordinamento",,"https://github.com/Informatica-per-le-biotecnologie-UniPI/web25/blob/teaching/algoritmica/4.pdf","https://colab.research.google.com/github/Informatica-per-le-biotecnologie-UniPI/web25/blob/teaching/algoritmica/sort.ipynb"
+"Lezione",algoritmica,"2025-10-08T10:30:00","Programmazione dinamica",,"https://github.com/Informatica-per-le-biotecnologie-UniPI/web25/blob/teaching/algoritmica/5.pdf",
+"Lezione",algoritmica,"2025-10-13T10:30:00","Allineamento",,"https://github.com/Informatica-per-le-biotecnologie-UniPI/web25/blob/teaching/algoritmica/6.pdf","https://colab.research.google.com/github/Informatica-per-le-biotecnologie-UniPI/web25/blob/teaching/algoritmica/edit_distance.ipynb"
+"Lezione",algoritmica,"2025-10-15T10:30:00","Allineamento con gap",,"https://github.com/Informatica-per-le-biotecnologie-UniPI/web25/blob/teaching/algoritmica/7.pdf","https://colab.research.google.com/github/Informatica-per-le-biotecnologie-UniPI/web25/blob/teaching/algoritmica/edit_distance.ipynb"
+"Esercitazione",algoritmica,"2025-10-20T10:30:00","Alberi",,"https://github.com/Informatica-per-le-biotecnologie-UniPI/web25/blob/teaching/algoritmica/8.pdf",
+"Lezione",programmazione,"2025-10-22T10:30:00","Simulazione compitino",,,
+"Lezione",programmazione,"2025-11-03T10:30:00","Introduzione e valori",,"static_files/lectures/programmazione/1.pdf","https://colab.research.google.com/github/Informatica-per-le-biotecnologie-UniPI/web25/blob/teaching/programmazione/values_and_types.ipynb"
+"Lezione",programmazione,"2025-11-05T10:30:00","Valori ed espressioni",,"static_files/lectures/programmazione/1.pdf","https://colab.research.google.com/github/Informatica-per-le-biotecnologie-UniPI/web25/blob/teaching/programmazione/programmazione/values_and_types.ipynb"
+"Esercitazione",programmazione,"2025-11-10T10:,"Valori ed espressioni",Esercitazione,,30:00"
+"Lezione",programmazione,"2025-11-12T10:30:00","Costrutti",,"static_files/lectures/programmazione/2.pdf","https://colab.research.google.com/github/Informatica-per-le-biotecnologie-UniPI/web25/blob/teaching/programmazione/constructs.ipynb"
+"Lezione",programmazione,"2025-11-17T10:30:00","Costrutti",,"static_files/lectures/programmazione/2.pdf","https://colab.research.google.com/github/Informatica-per-le-biotecnologie-UniPI/web25/blob/teaching/programmazione/constructs.ipynb"
+"Esercitazione",programmazione,"2025-11-19T10:,"Costrutti",Esercitazione,,30:00"
+"Lezione",programmazione,"2025-11-24T10:30:00","Funzioni",,"static_files/lectures/programmazione/3.pdf","https://colab.research.google.com/github/Informatica-per-le-biotecnologie-UniPI/web25/blob/teaching/programmazione/functions.ipynb"
+"Esercitazione",programmazione,"2025-11-26T10:30:00","Funzioni",Esercitazione,,
+"Esercitazione",programmazione,"2025-12-01T10:,"Funzioni",Esercitazione,,30:00"
+"Lezione",programmazione,"2025-12-03T10:30:00","Classi",,,"https://colab.research.google.com/github/Informatica-per-le-biotecnologie-UniPI/web25/blob/teaching/programmazione/classes.ipynb"
+"Lezione",programmazione,"2025-12-08T10:30:00","Classi",,,"https://colab.research.google.com/github/Informatica-per-le-biotecnologie-UniPI/web25/blob/teaching/programmazione/classes_advanced.ipynb"
+"Lezione",programmazione,"2025-12-10T10:30:00","Moduli",,,"https://colab.research.google.com/github/Informatica-per-le-biotecnologie-UniPI/web25/blob/teaching/programmazione/biopython.ipynb"
+"Esercitazione",programmazione,"2025-12-15T10:30:00","Classi",,
+"Esercitazione",programmazione,"2025-12-17T10:30:00","Classi",,

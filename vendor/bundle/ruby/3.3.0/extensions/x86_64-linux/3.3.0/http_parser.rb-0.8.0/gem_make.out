@@ -1,0 +1,15 @@
+current directory: /home/davine/projects/web25/vendor/bundle/ruby/3.3.0/gems/http_parser.rb-0.8.0/ext/ruby_http_parser
+/nix/store/jriyf2i0vc5yhcycsnclh5kpzpg9y7pc-ruby-3.3.9/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /home/davine/projects/web25/vendor/bundle/ruby/3.3.0/gems/http_parser.rb-0.8.0/ext/ruby_http_parser
+make DESTDIR\= sitearchdir\=./.gem.20251101-11035-ec1t2j sitelibdir\=./.gem.20251101-11035-ec1t2j clean
+
+current directory: /home/davine/projects/web25/vendor/bundle/ruby/3.3.0/gems/http_parser.rb-0.8.0/ext/ruby_http_parser
+make DESTDIR\= sitearchdir\=./.gem.20251101-11035-ec1t2j sitelibdir\=./.gem.20251101-11035-ec1t2j
+compiling ruby_http_parser.c
+gcc: fatal error: cannot execute ‘as’: posix_spawnp: No such file or directory
+compilation terminated.
+make: *** [Makefile:248: ruby_http_parser.o] Error 1
+
+make failed, exit code 2
