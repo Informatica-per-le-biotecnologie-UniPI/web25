@@ -11,8 +11,6 @@ Le esercitazioni accompagnano passo passo l'apprendimento della programmazione.
 
 Per mostrare un risultato, usa `print()`.
 
-## Valori, tipi, ed espressioni
-
 # 1
 Dato un genoma di lunghezza arbitraria...
 1. Estrai il codone (tre caratteri) iniziale
@@ -51,7 +49,7 @@ Data una collezione di numeri...
 9. E un'altra collezione di numeri, verifica che tutti gli elementi della seconda siano nella prima
 10. E un'altra collezione di numeri della stessa lunghezza, conta il numero di caratteri uguali (posizione per posizione)
 
-# 4
+# 5
 Una *maschera* (mask) è una sequenza booleana che filtra gli elementi di una sequenza. Se l'`i`-esimo elemento della maschera é vero, allora l'elemento viene selezionato, altrimenti viene scartato.
 
 1. Costruisci una maschera di una lunghezza arbitraria
@@ -60,3 +58,9 @@ Una *maschera* (mask) è una sequenza booleana che filtra gli elementi di una se
 4. Data una sequenza, e.g., una stringa, di lunghezza inferiore della maschera, stampa tutti i caratteri selezionati dalla maschera. Considera scartati tutti gli elementi in eccesso
 5. Data una sequenza, e.g., una stringa, di lunghezza inferiore della maschera, stampa tutti i caratteri scartati dalla maschera. Considera scartati tutti gli elementi in eccesso
 6. Data una sequenza, e.g., una stringa, della stessa lunghezza della maschera, somma tutti gli elementi selezionati dalla maschera
+
+# 6
+Sono date `n` stringhe (seleziona `n` a piacere) di una data lunghezza `m`.
+1. Per ogni posizione `i` in `[0, m - 1]`, stampa tutti i caratteri che appaiono in posizione `i`
+2. Per ogni posizione `i` in `[0, m - 1]`, stampa il carattere più frequente in posizione `i`
+3. Con `n == 2`, verifica che le due stringhe siano palindrome
