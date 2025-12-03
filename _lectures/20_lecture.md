@@ -1,12 +1,10 @@
 ---
 type: lecture
-date: 2025-12-10T10:30:00
-title: Moduli
-lecture_type: Lezione
+date: 2025-12-15T10:30:00
+title: nan
+lecture_type: Esercitazione
 thumbnail: /static_files/presentations/lec.jpg
 hide_from_calendar: false
 links:
-- url: https://colab.research.google.com/github/Informatica-per-le-biotecnologie-UniPI/web25/blob/teaching/programmazione/biopython.ipynb
-  name: notebook
 hide_from_announcments: true
 ---
