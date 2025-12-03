@@ -18,7 +18,11 @@ hide_from_calendar: false
         base += f"- url: {row['slides']}\n  name: slides\n"
 
     if isinstance(row["notebooks"], str):
-        base += f"- url: {row['notebooks']}\n  name: notebook\n"
+        if "," not in row["notebooks"]:
+            base += f"- url: {row['notebooks']}\n  name: notebook\n"
+        else:
+            for i, notebook in enumerate(row["notebooks"].split(",")):
+                base += f"- url: {notebook}\n  name: notebook {i}\n"
 
     # need a newline
     base += "hide_from_announcments: true\n---"

@@ -1,12 +1,14 @@
 ---
 type: lecture
-date: 2025-09-29T10:30:00
-title: Complessità computazionale
+date: 2025-12-08T10:30:00
+title: Moduli
 lecture_type: Lezione
 thumbnail: /static_files/presentations/lec.jpg
 hide_from_calendar: false
 links:
-- url: https://github.com/Informatica-per-le-biotecnologie-UniPI/web25/blob/teaching/algoritmica/2.pdf
-  name: slides
+- url: https://colab.research.google.com/github/Informatica-per-le-biotecnologie-UniPI/web25/blob/teaching/programmazione/modules.ipynb
+  name: notebook 0
+- url: https://colab.research.google.com/github/Informatica-per-le-biotecnologie-UniPI/web25/blob/teaching/programmazione/biopython.ipynb
+  name: notebook 1
 hide_from_announcments: true
 ---
