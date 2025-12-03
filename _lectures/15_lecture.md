@@ -1,7 +1,7 @@
 ---
 type: lecture
 date: 2025-11-26T10:30:00
-title: Funzioni
+title: Esercitazione
 lecture_type: Esercitazione
 thumbnail: /static_files/presentations/lec.jpg
 hide_from_calendar: false
