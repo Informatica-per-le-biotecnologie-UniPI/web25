@@ -69,14 +69,14 @@ Sono date `n` stringhe (seleziona `n` a piacere) di una data lunghezza `m`.
 
 # Dna to Protein
 
-Scrivere un programma che, data una stringa di DNA, la traduce nella catena di amminoacidi corrispondente. Il programma
+Scrivere un programma che, data una stringa di DNA, la traduce nella catena di aminoacidi corrispondente. Il programma
 1. Traduce il DNA in RNA
-2. Traduce l'RNA in una sequenza di amminoacidi
+2. Traduce l'RNA in una sequenza di aminoacidi
 
-Per semplicità, considera solo un sottoinsieme di amminoacidi. Considera inoltre di dover incorporare alcuni vincoli:
+Per semplicità, considera solo un sottoinsieme di aminoacidi. Considera inoltre di dover incorporare alcuni vincoli:
 
 - Il DNA deve avere una lunghezza appropriata
-- Esistono un codone iniziale e uno finale che non codificano amminoacidi
+- Esistono un codone iniziale e uno finale che non codificano aminoacidi
 
 
 ---
