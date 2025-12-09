@@ -1,6 +1,6 @@
 ---
 type: lecture
-date: 2025-12-08T10:30:00
+date: 2025-12-10T10:30:00
 title: Moduli
 lecture_type: Lezione
 thumbnail: /static_files/presentations/lec.jpg
