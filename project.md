@@ -29,6 +29,8 @@ L'esame si compone di due moduli, uno di algoritmica e uno di programmazione. I 
 - **Quando vengono consegnati i testi dei progetti?** Tipicamente dai 7 ai 10 giorni prima dell'appello, con notifica sulla bacheca del sito.
 - **Devo iscrivermi all'appello per consegnare il progetto?** Si. In ogni caso, nelle note d'iscrizione indicare che modulo si intende dare. Per gli appelli straordinari, indicare anche su che programma viene dato il corso.
 - **Per l'orale devo portare il computer?** Si consiglia di portare il proprio. In caso non si possa, è disponibile un laptop.
+- **Come carico il progetto su Github?** Crea un account, e segui le [istruzioni online per creare un repository privato](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-new-repository). Dalla pagina del repository seleziona `Upload` (a volte indicato con il tasto `+`) e seleziona i file da caricare.
+- **Come invito un collaboratore?** Segui la [documentazione online](https://docs.github.com/articles/inviting-collaborators-to-a-personal-repository).
 
 
 ### Lezioni
