@@ -187,3 +187,106 @@ Ossia, se esiste uno stato sorgente in cui possiamo raggiungere due stati destin
 
 Implementa la verifica di una stringa su automi non deterministici.
 Se ritieni necessario, estendi il tuo sistema di classi.
+
+---
+
+## Modulo 1: organismi
+Si definisce una specie `X`, e.g., `Rattus Norvegicus`, i cui membri son definiti da diverse caratteristiche e comportamenti. La specie deve estendere una classe astratta `Species`. L'organismo è definito dal suo genoma, e dal suo meccanismo di riproduzione.
+
+### Genoma
+Definito su un alfabeto di basi `{"A", "C", "G", "T"}`, e di una lunghezza fissa $l \geq 30$ e multiplo di tre.
+
+### Meccanismo di riproduzione sessuata
+Membri di un sesso si riproducono esclusivamente con membri dell'altro sesso, dando vita a un numero $k$ di organismi figli.
+
+#### Riproduzione
+$k$ è dato da
+- Un insieme (non vuoto) di fattori ambientali, e.g., concentrazione ossigeno, dati al momento della riproduzione. L'ambiente viene definito nel modulo 2.
+- La fertilità combinata degli organismi genitori. Come questa venga combinata, e.g., somma, media, ecc., è di libera scelta.
+
+Come i fattori ambientali determinano $k$ è di libera scelta, e.g.,
+- Con bassa concentrazione di ossigeno, $k$ rimane tra $1$ e $3$
+- Con media concentrazione di ossigeno, $k$ rimane tra $2$ e $5$
+- Con media concentrazione di ossigeno e alta pressione, $k$ rimane tra $1$ e $2$
+- ...
+
+#### Genoma nuova generazione
+La creazione del genoma per un organismo figlio segue due fasi, una di seguito all'altra:
+1. Creazione genoma figlio
+2. Mutazioni tratti
+
+La nuova generazione ha, base per base, un genoma randomico che non dipende dai genitori.
+Fanno eccezione alcune porzioni contigue del genoma, che codificano dei *tratti* della specie.
+
+**Tratti.** Un *tratto* è caratterizzato da:
+- Una posizione e lunghezza (fisse in ogni organismo e generazione!)
+- Un insieme di valori, ognuno codificato da (una sequenza di) basi. Per semplicità si può considerare che ogni valore ha una sola sequenza che lo definisce. Qualsiasi altra sequenza che non codifica un valore viene considerata tratto "nullo" o "perso". Puoi usare un "-" come simbolo al di fuori dell'alfabeto per indicarlo.
+- Un indice di dominanza dei valori: maggiore è l'indice, maggiore la probabilità che questo valore sia trasmesso di generazione in generazione. Gli indici sono nell'intervallo $[0, 1]$, e sommano a $1$.
+
+Ad esempio, un tratto `Colore occhi` viene trasmesso nella posizione $125$, ha lunghezza $1$, e i seguenti valori e indici di dominanza.
+
+| Valore | Genoma | Indice dominanza |
+| ------ | ------ | ---------------- |
+| Blu    | `A`    | `0.2`            |
+| Verde  | `C`    | `0.4`            |
+| Grigio | `G`    | `0.4`            |
+*Esempio di indici di dominanza per il tratto colore occhi. Nota che gli indici sommano a 1.*
+
+Nel processo di riproduzione, un valore del tratto dei genitori si trasmette al figlio, con una probabilità proporzionale alla dominanza del tratto.
+Ossia, un tratto a dominanza maggiore avrà probabilità maggiore di essere trasmesso.
+ 
+**Mutazioni.** Randomicamente, e a probabilità molto basse, la sequenza che definisce un tratto può mutare.
+Questo può anche distruggere il tratto!
+Un tratto distrutto ha **sempre** indice di dominanza $0$: viene passato alla generazione successiva *se e solo se* entrambi i genitori hanno il tratto distrutto!
+E.g., una mutazione sul colore occhi potrebbe rimuovere totalmente la pigmentazione dell'iride se la mutazione risulta in una sequenza diversa da quelle che lo codificano.
+Similmente, un tratto perso per mutazione può essere ripristinato successivamente da un'altra mutazione.
+
+| Valore                | Genoma | Indice dominanza |
+| --------------------- | ------ | ---------------- |
+| Blu                   | `A`    | `0.2`            |
+| Verde                 | `C`    | `0.4`            |
+| Grigio                | `G`    | `0.4`            |
+| Perdita pigmentazione | `T`    | `0`              |
+
+*Esempio di un tratto `Colore occhi`. Una mutazione del genoma associato al tratto lo può distruggere!*
+
+
+Si definiscano $2$ tratti con $2+$ possibili valori, indici di dominanza, genomi, posizioni e lunghezze associate. Si definisca una mutazione che, *dopo* la creazione del genoma dell'organismo appena nato, randomicamente e con una data probabilità, modifichi la sequenza associata a un tratto. La mutazione è di libera scelta, con un valore fisso o randomico.
+
+
+## Modulo 2: ambiente
+Si definisce un ambiente che gestisca gli organismi del modulo 1.
+L'ambiente è definito da:
+- Epoche: unità temporale, e.g., anno, in cui osserviamo l'ambiente e gli organismi in esso
+- Organismi: definiti al punto 1
+- "Generazione" di ogni organismo che traccia a che generazione appartiene un singolo organismo
+- Fattori ambientali che variano a ogni epoca
+
+**Organismi e relazioni.** L'ambiente deve tenere traccia delle varie generazioni e fornire il riconoscimento dell'ordine di generazione, i.e., l'ambiente deve fornire una funzione per poter rispondere alla domanda "L'organismo `A` appartiene a una generazione precedente a organismo `B`?"
+
+**Fattori ambientali.** I fattori ambientali, e.g., pressione atmosferica e concentrazione di ossigeno, variano di epoca in epoca.
+I loro valori sono dati da diverse distribuzioni.
+Si definiscano $2+$ fattori ambientali, ognuno con distribuzione diversa, e.g., una Gaussiana, una esponenziale, e una Beta.
+
+### Emulazione
+L'ambiente fornisce l'emulazione di un numero dato di epoche.
+Nell'emulazione di un'epoca avvengono, in ordine:
+1. Riproduzione. **Stando ai vincoli sulla riproduzione** definiti nel modulo 1, gli organismi si riproducono, generando figli. La scelta di coppie in riproduzione può essere fatta randomicamente. Vale la monogamia per epoca! In un'epoca, un organismo si riproduce al più con un altro organismo.
+2. Mortalità infantile. Fattori ambientali estremi (con valori sotto una certa soglia) possono uccidere alcuni degli organismi nati in questa generazione con una certa probabilità, e.g., se la concentrazione di ossigeno cala sotto il 10% il 3% degli organismi perisce di conseguenza. La scelta di quali fattori, con quali valori e probabilità determinano la morte rimane a scelta libera. Dei fattori definiti sopra, se ne scelga uno con una probabilità di causare morte non nulla.
+3. Effetto vecchiaia. Organismi oltre un'età arbitraria muoiono di vecchiaia.
+
+| Fattore                 | Distribuzione                                     | Valore estremo | Probabilità morte |
+| ----------------------- | ------------------------------------------------- | -------------- | ----------------- |
+| Concentrazione ossigeno | Gaussiana con media a 22, deviazione standard a 2 | 10             | 0.05              |
+
+*Esempio di fattore ambientale estremo: se la concentrazione di ossigeno in una data epoca scende sotto il 10%, allora un organismo muore con probabilità del 5%.*
+
+## Modulo 3: mating strategy
+Una mating strategy (strategia di accoppiamento) definisce le preferenze di un organismo in fase di accoppiamento: dato un organismo e una lista di candidati, con quale organismo si accoppierebbe se potesse scegliere? Formalmente, una mating strategy definisce un ranking di preferenze.
+
+Si definiscano 4 mating strategy per gli organismi del modulo $1$ e $2$, che definiscono, per ogni organismo, un ranking di preferenze di accoppiamento con altri organismi. L'organismo dovrà quindi, data una lista di possibili mate, dare un proprio ranking.
+Le strategy sono:
+- Randomica: un organismo ha un ranking randomico di tutti gli altri organismi
+- Per età: maggiore la similarità d'età, minore la posizione nel ranking
+- Per tratti desiderati: alla nascita, a ogni organismo sono dati un insieme di valori di tratti desiderati casuali. L'organismo crea un ranking in cui organismi con i tratti desiderati hanno rank minore.
+- Bonus: a libera scelta, con strategia definita dal gruppo
