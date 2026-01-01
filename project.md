@@ -65,7 +65,7 @@ I testi di progetto appaiono in precedenza a ogni appello. Una cheat sheet è di
 In gruppi di 2-3 persone, gli studenti devono decidere come modellare i concetti richiesti, definendo classi, interfacce, estensioni, campi, e metodi, operando scelte giustificate. Il progetto **deve** includere:
 
 1. Una documentazione
-    1. Generale: un `README.md` che indica la struttura del progetto, e.g., che modulo svolge quali funzioni, quali sono le funzioni che offrono quali feature, ecc. Si includa anche una piccola sezione `Quickstart` in cui si dettaglia come eseguire gli esempi di utilizzo richiesti dal testo
+    1. Generale: un `README.md` che indica la struttura del progetto, e.g., che modulo svolge quali funzioni, quali sono le funzioni che offrono quali feature, ecc. Si includa anche una piccola sezione `Quickstart` in cui si dettaglia come eseguire gli esempi di utilizzo richiesti dal testo. Trovi esempi di `README.md` [qui](https://github.com/Informatica-per-le-biotecnologie-UniPI/postings/blob/master/README.md) e [qui](https://github.com/Informatica-per-le-biotecnologie-UniPI/traits/blob/feb7/README.md). Clicca su `Raw` per vedere il codice.
     2. In codice: documentazione per funzioni e classi, i.e., commenti e tipizzazione funzioni
 2. Uno script eseguibile `main.py` con esempi di utilizzo che mostrino **tutte** le funzionalità richieste dal testo
 3. Uno o più file (non il `main.py`) che implementano la consegna
@@ -96,6 +96,35 @@ La valutazione del progetto include, in ordine di importanza:
 - Indica i tipi dei parametri delle funzioni, e il loro tipo di ritorno
 - Nelle funzioni e nei metodi, indica con un breve commento cosa la funzione implementa, e a cosa servono i vari parametri
 
+### Import
+In caso di progetto con diversi file, puoi trattare ogni file come un "modulo" da cui importare funzioni e/o classi. E.g., dato un file `amoeba.py` con contenuto
+
+`amoeba.py`
+```python
+class Amoeba:
+    ...
+```
+
+puoi poi creare, nella stessa cartella, un file con contenuto
+
+```python
+from amoeba import Amoeba
+
+x = Amoeba()
+...
+```
+
+**Nota:** L'`import` esegue il file che importa. Se hai del codice esterno alle funzioni/classi, questo viene eseguito ogni volta che fai l'import. Per buona pratica, nei file da cui vuoi importare funzioni/classi non inserire codice ulteriore.
+
+### Documentazione
+
+Quando sei in dubbio, sfrutta la [cheat sheet](https://informatica-per-le-biotecnologie-unipi.github.io/web25//static_files/cheat.pdf) o la documentazione di Python!
+
+- Documentazione [costrutti](https://docs.python.org/3/tutorial/controlflow.html)
+- Documentazione [collezioni](https://docs.python.org/3/tutorial/datastructures.html)
+- Documentazione [eccezioni](https://docs.python.org/3/tutorial/errors.html)
+- Documentazione [funzioni predefinite](https://docs.python.org/3/library/functions.html)
+
 ## Scrittura codice
 Quando scrivi codice:
 1. Identifica che categorie di dati ti servono
@@ -109,22 +138,119 @@ Quando scrivi codice:
 7. Implementa separatamente tutte le diverse funzioni/algoritmi
 8. Testa il tuo codice sugli esempi del punto sopra, partendo dai tuoi task base. Se falliscono, torna indietro, aggiusta, e torna al punto precedente
 
+L'utilizzo di strumenti di AI per la scrittura di codice o documentazione **non è consentito**.
 
 </div>
 <!--  -->
 <div class="ui bottom attached tab segment" data-tab="gennaio" markdown="1">
 
-- **Consegna traccia** 2/1
-- **Deadline** 9/1
+*Segui le linee guida nella tab di fianco. Scadenza consegna: 9 gennaio. Per dubbi, chiedere via mail.*
+
+# Contesto
+
+Nell'editing genetico, un genoma base viene modificato, aggiungendo delle sequenze predefinite, dette *insertions*, in determinati punti del genoma stesso, risultando in un *edit* del genoma. Tali inserimenti avvengono subito dopo degli specifici *insertion point*, ossia specifici punti del genoma identificati da una sequenza genetica. Un edit risulta in un unico inserimento: se un genoma presenta `> 1` insertion points, l'edit avviene solo su uno, scelto arbitrariamente. Inoltre, se l'insertion è già presente nel genoma, l'inserimento **non** avviene.
+
+**Esempio.**
+```python
+genome = "ACCTGCAACTGC"
+insertion_point = "CT"
+insertion = "GGGTGGG"
+```
+
+Questo esempio fornisce i seguenti insert point (indicati da `*`):
+```python
+"ACCT*GCAACT*GC"
+```
+L'edit avviene inserendo le insertion in uno solo degli insertion points, e.g.,
+
+- `"ACCTGGGTGGGGCAACTGC"`
+- `"ACCTGCAACTGGGTGGGGC"`
+
+Gli inserimenti possono avere successo, oppure no, risultando in genomi non modificati, o modificati erroneamente. In caso di errori si ha una di due casistiche:
+
+1. l'inserimento è vuoto
+2. l'inserimento è non vuoto: il primo carattere dell'insertion viene inserito correttamente, ma gli altri possono mutare
+
+Nell'esempio di cui sopra, possibili inserimenti con errori includono
+
+- `ACCTGCAACTGC` inserimento vuoto
+- `ACCTGCAACTGGTAAAGC` ultimi tre caratteri incorretti
+- `ACCTGCAACTGGTAGGC` penultimo carattere incorretto
 
 
-<div class="ui placeholder">
-    <div class="line"></div>
-    <div class="line"></div>
-    <div class="line"></div>
-    <div class="line"></div>
-    <div class="line"></div>
-</div>
+Nelle seguenti, assumi un alfabeto genomico standard di basi "ACGT".
+
+---
+
+# Traccia
+## Parte A
+*Gruppi da 1 a 3 studenti*
+
+**1.**
+Scrivere una funzione che, dato un genoma di partenza, un insertion, un insertion point, e un potenziale edit:
+
+1. Calcola se l'edit è corretto o meno
+2. Calcola il punto di inserimento, i.e., l'indice in cui è avvenuto l'inserimento. In caso di ambiguità, considera un punto arbitrario
+3. In caso di edit incorretto, calcola l'errore: quante basi dell'insertion sono state inserite incorrettamente?
+
+
+**2.**
+Viene fornito un insieme di `k` possibili inserimenti, i.e., `k` inserimenti e `k` insertion points. Scrivi una funzione che, dato un edit, calcola il numero di errori per ognuno dei `k` possibili inserimenti, e li ordina da quello con meno a quello con più successo.
+
+**Esempio.**
+```python
+genome = "ACCTGCAACTGC"
+insertion_points = ["CT", "AC"]
+insertion = ["GTG", "TGT"]
+
+edits = [
+	"ACCTGCAACT GAG GC",
+	"ACCTGCAACT GGG GC",
+	"AC TAT TGGCAACTGC", 
+	"AC TGT CTGCAACTGC",	
+	"ACCTGCAACTGC",
+]
+```
+
+In questo caso, l'ordine restituito sarebbe
+
+```python
+"AC TGT CTGCAACTGC", # errori: 0 su insertion point AC
+"ACCTGCAACT GAG GC", # errori: 1 su insertion point CT
+"ACCTGCAACT GGG GC", # errori: 1 su insertion point CT
+"AC TAT TGGCAACTGC", # errori: 1 su insertion point AC
+"ACCTGCAACT GC", # errori: 3 su insertion point CT
+```
+
+Nota: gli spazi negli esempi sopra sono stati inseriti per leggibilità. *Non* sono parte dell'edit.
+
+## Parte B
+*Gruppi da 2 a 3 studenti*
+
+Il modulo [random](https://docs.python.org/3/library/random.html) fornisce funzioni per l'estrazione/generazione pseudo-casuale di valori. Consultalo per trovare funzioni che fanno al caso per l'implementazione di questa parte.
+
+Scrivi una funzione che genera possibili edit sulla base di un dato genoma di base, insertion, e insertion point. Gli edit dovranno essere generati sulla base di un parametro che indica che tipo di edit generare. In ogni casistica, considera *tutti* i possibili insertion point, non solo il primo che trovi. Nello specifico, possono essere richiesti edit di questo tipo:
+
+- Privo di errori: edit inserito nell'insertion point corretto, e con l'insertion corretta. Considera *tutti* i possibili inserition point nel genoma.
+- Con `r` (`r` numero intero) errori: inserito nell'insertion point corretto, ma con `r` mutazioni nell'insertion. Anche qui, considera *tutti* i possibili inserition point nel genoma.
+- Senza inserimento: nessuna modifica al genoma originale.
+
+Nella casistica con `r` errori, le basi inserite come errori *non* hanno una probabilità uniforme: la funzione sceglie gli errori su probabilità date, e.g., `"T"` con probabilità `0.5`, `"G"` con probabilità `0.3`, e `A` con probabilità `0.2`.
+
+## Parte C
+*Gruppi da 3 studenti*
+
+Il modulo [random](https://docs.python.org/3/library/random.html) fornisce funzioni per l'estrazione/generazione pseudo-casuale di valori. Consultalo per trovare funzioni che fanno al caso per l'implementazione di questa parte.
+
+Crea una funzione che seleziona dei valori per:
+
+- Insertion: valori scelti randomicamente. Lunghezza dell'insertion scelta a campione da una distribuzione di tua scelta.
+- Insertion point: valori scelti randomicamente.
+- Casistica di edit, come indicata nella parte B. Tipo di edit scelto randomicamente, e in caso di errori, il numero di errori scelto a campione da una distribuzione di tua scelta.
+
+Dati un genoma e un numero di edit desiderati, la funzione genera degli edit sulla base dei valori sopra indicati.
+
+
 </div>
 <!--  -->
 <div class="doi ui bottom attached tab segment" data-tab="febbraio">
