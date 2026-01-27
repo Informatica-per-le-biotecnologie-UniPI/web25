@@ -47,9 +47,9 @@ L'esame si compone di due moduli, uno di algoritmica e uno di programmazione. I 
 I testi di progetto appaiono in precedenza a ogni appello. Una cheat sheet è disponibile [qui](../static_files/cheat.pdf) per aiutare nella sintassi del linguaggio.
 
 <div class="ui top attached tabular menu">
-    <a class="item active" data-tab="linee"><b>Linee guida</b></a>
+    <a class="item" data-tab="linee"><b>Linee guida</b></a>
     <a class="item" data-tab="gennaio">Gennaio</a>
-    <a class="item" data-tab="febbraio">Febbraio</a>
+    <a class="item active" data-tab="febbraio">Febbraio</a>
     <a class="item" data-tab="marzo">Marzo</a>
     <a class="item" data-tab="aprile">Aprile</a>
     <a class="item" data-tab="maggio">Maggio</a>
@@ -58,7 +58,7 @@ I testi di progetto appaiono in precedenza a ogni appello. Una cheat sheet è di
     <a class="item" data-tab="settembre">Settembre</a>
 </div>
 <!--  -->
-<div class="ui bottom attached tab segment active" data-tab="linee" markdown="1">
+<div class="ui bottom attached tab segment" data-tab="linee" markdown="1">
     
 ### Progetto
 
@@ -67,8 +67,8 @@ In gruppi di 2-3 persone, gli studenti devono decidere come modellare i concetti
 1. Una documentazione
     1. Generale: un `README.md` che indica la struttura del progetto, e.g., che modulo svolge quali funzioni, quali sono le funzioni che offrono quali feature, ecc. Si includa anche una piccola sezione `Quickstart` in cui si dettaglia come eseguire gli esempi di utilizzo richiesti dal testo. Trovi esempi di `README.md` [qui](https://github.com/Informatica-per-le-biotecnologie-UniPI/postings/blob/master/README.md) e [qui](https://github.com/Informatica-per-le-biotecnologie-UniPI/traits/blob/feb7/README.md). Clicca su `Raw` per vedere il codice.
     2. In codice: documentazione per funzioni e classi, i.e., commenti e tipizzazione funzioni
-2. Uno script eseguibile `main.py` con esempi di utilizzo che mostrino **tutte** le funzionalità richieste dal testo
-3. Uno o più file (non il `main.py`) che implementano la consegna
+2. Uno script eseguibile `main.py` con esempi di utilizzo che mostrino **tutte** le funzionalità richieste dal testo, una per una. Funzionalità non mostrate nel main sono considerate **non implementate**.
+3. Uno o più file (non il `main.py`) che implementano la consegna.
 
 ### Consegna
 
@@ -101,6 +101,9 @@ In caso di progetto con diversi file, puoi trattare ogni file come un "modulo" d
 
 `amoeba.py`
 ```python
+def foo(a, b):
+    ...
+
 class Amoeba:
     ...
 ```
@@ -109,8 +112,10 @@ puoi poi creare, nella stessa cartella, un file con contenuto
 
 ```python
 from amoeba import Amoeba
+from amoeba import foo
 
 x = Amoeba()
+y = foo(...)
 ...
 ```
 
@@ -253,14 +258,22 @@ Dati un genoma e un numero di edit desiderati, la funzione genera degli edit sul
 
 </div>
 <!--  -->
-<div class="doi ui bottom attached tab segment" data-tab="febbraio">
-    <div class="ui placeholder">
-        <div class="line"></div>
-        <div class="line"></div>
-        <div class="line"></div>
-        <div class="line"></div>
-        <div class="line"></div>
-    </div>
+<div class="doi ui bottom attached tab segment active" data-tab="febbraio" markdown="1">
+
+
+**Pubblicazione testo.** venerdi 30, ore 10:30.
+
+**Scadenza.** venerdi 6, ore 10:30.
+
+Leggi con massima attenzione le linee guida prima di iniziare.
+
+<div class="ui placeholder">
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+</div>
 </div>
 <!--  -->
 <div class="doi ui bottom attached tab segment" data-tab="marzo">
