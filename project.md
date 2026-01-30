@@ -260,20 +260,73 @@ Dati un genoma e un numero di edit desiderati, la funzione genera degli edit sul
 <!--  -->
 <div class="doi ui bottom attached tab segment active" data-tab="febbraio" markdown="1">
 
-
-**Pubblicazione testo.** venerdi 30, ore 10:30.
-
 **Scadenza.** venerdi 6, ore 10:30.
 
-Leggi con massima attenzione le linee guida prima di iniziare.
+Leggi con **massima attenzione** le linee guida prima di iniziare.
 
-<div class="ui placeholder">
-    <div class="line"></div>
-    <div class="line"></div>
-    <div class="line"></div>
-    <div class="line"></div>
-    <div class="line"></div>
-</div>
+# Contesto
+
+In chemioinformatica, le molecole sono spesso modellate e rappresentate con stringhe che seguono precise regole di *encoding*. L'encoding definisce come una molecola, e.g., l'acetofenone, viene trascritta in una stringa, similmente a quanto accade per le formule molecolari. In questo progetto, lavoreremo sulla verifica di un encoding particolare: *FAME*.
+
+### Atomi
+All'interno delle stringhe FAME, gli atomi sono indicati con il loro simbolo atomico standard, rigorosamente in maiuscolo, e.g., `C` per l'atomo di carbonio. FAME rappresenta unicamente molecole con atomi di carbonio (`C`), azoto (`N`), ossigeno (`O`), idrogeno (`H`), fluoro (`F`), o zolfo (`S`), in una qualsiasi combinazione. A ogni atomo associamo una *valenza*, definita come il numero di elettroni aggiuntivi che garantisce stabilità. E.g., il carbonio ha valenza `4` poiché per essere stabile deve avere `4` elettroni in condivisione da altri atomi. Pertanto, stringhe FAME in cui il carbonio non ha legami che gli garantiscono valenza `4` modellano molecole non valide. In FAME, consideriamo unicamente semplici legami covalenti in cui gli atomi sono condivisi.
+Nelle stringhe FAME, **due atomi che sono oggetto di un legame**, e.g., idrogeno e ossigeno nell'acqua, **si trovano uno di seguito all'altro**, e sono **inframezzati da** dei simboli che rappresentano il **legame** covalente che intercorre, e.g., legame covalente singolo, doppio, o triplo. 
+
+**Esempi.** Utilizziamo `{LEGAME X}` per indicare un legame covalente su `X` elettroni. 
+- $H_2O$ con FAME`H{LEGAME SINGOLO}O{LEGAME SINGOLO}H`
+-  $C_2 H_2$ con FAME `H{LEGAME SINGOLO}C{LEGAME TRIPLO}C{LEGAME SINGOLO}H`.
+-  $C_2 H_2$ con FAME `H{LEGAME SINGOLO}H{LEGAME SINGOLO}C{LEGAME TRIPLO}C` è un esempio non corretto: implica che il secondo idrogeno ha due legami singoli, uno con il primo idrogeno e uno con il primo carbonio, e che il secondo carbonio ha solo un legame triplo. Pertanto il secondo idrogeno viola la valenza, cosi' come il secondo carbonio.
+
+### Legami
+FAME modella i legami covalenti, e ne inserisce un encoding tra gli atomi in legame secondo la seguente tabella.
+
+| Encoding | Legame           | Valenza | Info                                                                                                                   | Esempio                            |
+| -------- | ---------------- | ------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------- |
+| `-`      | Legame singolo   | `1`     | Opzionale                                                                                                              | $H_2 O$ con `H-O-H`                |
+| `^...&`  | Ramificazione    |         | Le ramificazioni iniziano con un `^` e terminano con un `&`, e gli atomi in cui si ramifica non hanno ulteriori legami | `C^-H&-H`, `O^-H&-H`, `O^-H-H&`    |
+| `=`      | Legame doppio    | `2`     |                                                                                                                        | `C^=O=O&`                          |
+| `#`      | Legame triplo    | `3`     |                                                                                                                        | `H-C#C-H`                          |
+|          | Legame aromatico | `1.5`   | Atomi con lettere minuscole, apertura e chiusura anello con numeri. Ogni blocco tra quadre.                            | `[c-H]1[c-H][c-H][c-H][c-H][c-H]1` |
+
+**Nota.** Assumi che i singoli legami siano sempre validi per difetto, i.e., che in una stringa FAME un atomo con valenza `X` abbia legami con valenza `Y <= X`, e.g., un ossigeno può avere legami singoli o doppi, ma non tripli.
+
+#### Ramificazioni
+Le ramificazioni arricchiscono FAME, permettendo di modellare molecole in cui un singolo atomo è oggetto di più legami, e.g., un carbonio con quattro idrogeni. In FAME, le ramificazioni iniziano con un `^`, terminano con un `&`, e riportano `>= 1` legami. Se un atomo ha ramificazioni, queste lo seguono *immediatamente* nella stringa FAME. I.e., in `H-C-O^-H&`, la ramificazione `^-H&` va interpretata come ramificazione dell'ossigeno.
+
+Gli atomi all'interno della ramificazione **non** hanno legami tra loro, né con altri atomi, e.g., se un carbonio ramifica in un ossigeno, l'ossigeno non ha altri legami a sua volta. In caso di ramificazione su più atomi, e.g., un carbonio con quattro idrogeni, gli atomi interessati sono indicati una di seguito all'altro, e.g., `C^-H-H-H&-H` o `C^-H-H-H&` per il metano.
+
+#### Legami aromatici
+Nel caso di composti aromatici, in cui gli atomi formano un anello aromatico, ogni atomo nell'anello è legato ad altri due atomi nell'anello. In FAME, gli atomi che fanno parte dell'anello sono indicati i) *in minuscolo*, e ii) tra parentesi quadre, assieme a eventuali legami con atomi esterni all'anello. Assumi che un atomo nell'anello può avere legami e/o ramificazioni. Inoltre, l'atomo di apertura e chiusura anello sono seguiti da indici che riportano il numero dell'anello all'interno della molecola. In caso di legami con ulteriori atomi esterni all'anello, e.g., idrogeni nel benzene:
+- L'atomo nell'anello aromatico appare sempre in prima posizione, e.g., `[c-H]` è corretto, mentre `[H-c]` no.
+- Un atomo nell'anello può avere *al più* un legame con un atomo al di fuori dell'anello. Se ne ha uno, l'atomo interessato *non* ha ulteriori legami. E.g., il caso `[c^-H&-H]` non è valido (oltre alla valenza non corretta per il carbonio), poiché `c` può avere al massimo un legame con un atomo esterno, i.e., nessuna ramificazione, mentre `[c-H]` è valido poiché `c` ha un solo legame esterno.
+- Fa eccezione al punto precedente l'ultimo atomo nell'anello, che può avere legami con atomi esterni che portano ad altri legami, e.g., il bifenile, che ha due anelli `[c-H]1[c-H][c-H][c-H][c-H][c]1`. Questi sono quindi indicati con `[c-H]1[c-H][c-H][c-H][c-H][c]1-[c-H]2[c-H][c-H][c-H][c-H][c]2`
+
+Poiché le molecole possono avere più anelli, il primo e ultimo atomo (o coppia (atomo, ramificazione)) dell'anello sono seguiti dall'indice dell'anello, e.g., nel benzene ($C_6 H_6$) il primo e l'ultimo `[cH]` sono seguiti da `1`, risultando in `[cH]1[cH][cH][cH][cH][cH]1`. Gli indici partono da `1` e sono incrementali. Considera che gli anelli **non sono** mai **innestati**, e ricorda che i legami aromatici hanno valenza di `1.5`, e che in un anello questa sale a `3.0` per natura stessa dell'anello.
+
+---
+
+# Traccia
+
+## Parte A
+*Gruppi da 1 a 3 studenti*
+
+Scrivi una funzione che determina, dato un encoding FAME, se questo è valido o meno. Ossia, se i singoli caratteri della stringa siano tutti atomi o legami, se i legami sono possibili, i.e., i legami rispettano le valenze dei singoli atomi, e se ogni singolo atomo rispetta la sua valenza, e.g., ogni carbonio è in legami per un totale di valenza 4. In questa parte, non considerare i legami aromatici.
+
+## Parte B
+*Gruppi da 2 a 3 studenti*
+
+Scrivi una funzione che, dati due encoding FAME, determina se le due molecole corrispondenti possono entrare in un legame covalente. Considera come possibili atomi che formano un legame, solo gli atomi nella "testa" e "coda" dell'encoding FAME, ossia il primo atomo di uno FAME, e l'ultimo atomo dell'altro.
+
+**Esempi.**
+
+- In `C^-H&#C`, l'ultimo carbonio ha solo un legame triplo con il primo carbonio, pertanto ha ora valenza `1`. Un semplice `H`, o un `O-H` offre esattamente valenza `1`
+- In `C^-H-H&=O` sia testa che coda non possono formare ulteriori legami: non si può legare a nessun altra molecola.
+
+## Parte C
+*Gruppi da 3 studenti*
+
+Integra i legami aromatici nella parte A e B.
+
 </div>
 <!--  -->
 <div class="doi ui bottom attached tab segment" data-tab="marzo">
