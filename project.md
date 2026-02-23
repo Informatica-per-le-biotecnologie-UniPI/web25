@@ -49,8 +49,8 @@ I testi di progetto appaiono in precedenza a ogni appello. Una cheat sheet è di
 <div class="ui top attached tabular menu">
     <a class="item" data-tab="linee"><b>Linee guida</b></a>
     <a class="item" data-tab="gennaio">Gennaio</a>
-    <a class="item active" data-tab="febbraio">Febbraio</a>
-    <a class="item" data-tab="marzo">Marzo</a>
+    <a class="item" data-tab="febbraio">Febbraio</a>
+    <a class="item active" data-tab="marzo">Marzo</a>
     <a class="item" data-tab="aprile">Aprile</a>
     <a class="item" data-tab="maggio">Maggio</a>
     <a class="item" data-tab="giugno">Giugno</a>
@@ -69,6 +69,9 @@ In gruppi di 2-3 persone, gli studenti devono decidere come modellare i concetti
     2. In codice: documentazione per funzioni e classi, i.e., commenti e tipizzazione funzioni
 2. Uno script eseguibile `main.py` con esempi di utilizzo che mostrino **tutte** le funzionalità richieste dal testo, una per una. Funzionalità non mostrate nel main sono considerate **non implementate**.
 3. Uno o più file (non il `main.py`) che implementano la consegna.
+
+Progetti che non seguono la struttura sopra indicata sono considerati insufficienti.
+
 
 ### Consegna
 
@@ -330,13 +333,13 @@ Integra i legami aromatici nella parte A e B.
 </div>
 <!--  -->
 <div class="doi ui bottom attached tab segment" data-tab="marzo">
-    <div class="ui placeholder">
-        <div class="line"></div>
-        <div class="line"></div>
-        <div class="line"></div>
-        <div class="line"></div>
-        <div class="line"></div>
-    </div>
+    
+
+    Si utilizzi il testo progetto dell'appello di Gennaio.
+
+    **Scadenza.** Martedi 3, ore 09:00.
+
+
 </div>
     
 <!--  -->
