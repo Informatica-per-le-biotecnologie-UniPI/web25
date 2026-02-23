@@ -337,7 +337,8 @@ Integra i legami aromatici nella parte A e B.
 
     Si utilizzi il testo progetto dell'appello di Gennaio.
 
-    **Scadenza.** Martedi 3, ore 09:00.
+
+    <b>Scadenza.</b> Martedi 3, ore 09:00.
 
 
 </div>
