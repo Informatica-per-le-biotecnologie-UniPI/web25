@@ -261,7 +261,7 @@ Dati un genoma e un numero di edit desiderati, la funzione genera degli edit sul
 
 </div>
 <!--  -->
-<div class="doi ui bottom attached tab segment active" data-tab="febbraio" markdown="1">
+<div class="doi ui bottom attached tab segment" data-tab="febbraio" markdown="1">
 
 **Scadenza.** venerdi 6, ore 10:30.
 
