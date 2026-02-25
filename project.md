@@ -332,7 +332,7 @@ Integra i legami aromatici nella parte A e B.
 
 </div>
 <!--  -->
-<div class="doi ui bottom attached tab segment" data-tab="marzo">
+<div class="doi ui bottom attached tab segment active" data-tab="marzo">
     
 
     Si utilizzi il testo progetto dell'appello di Gennaio.
