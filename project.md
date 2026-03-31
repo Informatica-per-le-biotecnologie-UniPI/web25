@@ -347,7 +347,7 @@ Integra i legami aromatici nella parte A e B.
 <div class="doi ui bottom attached tab segment active" data-tab="aprile" markdown="1">
 
 
-Nell'editing genetico, un genoma base viene modificato, aggiungendo delle sequenze predefinite, dette *insertions*, in determinati punti del genoma stesso, risultando in un *edit* del genoma. Tali inserimenti avvengono subito dopo degli specifici *insertion point*, ossia specifici punti del genoma identificati da una sequenza genetica. Un edit risulta in un unico inserimento: se un genoma presenta `> 1` insertion points, l'edit avviene solo sull'ultimo. Inoltre, se l'insertion è già presente nel genoma, l'inserimento **non** avviene.
+Nell'editing genetico, un genoma base viene modificato, aggiungendo delle sequenze predefinite, dette *insertions*, in determinati punti del genoma stesso, risultando in un *edit* del genoma. Tali inserimenti avvengono subito dopo degli specifici *insertion point*, ossia specifici punti del genoma identificati da una sequenza genetica. Un edit risulta in un unico inserimento: se un genoma presenta `> 1` insertion points, l'edit avviene solo sull'ultimo.
 
 **Esempio.**
 ```python
