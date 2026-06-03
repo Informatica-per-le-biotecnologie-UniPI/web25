@@ -230,6 +230,7 @@ Ad esempio, un tratto `Colore occhi` viene trasmesso nella posizione $125$, ha l
 | Blu    | `A`    | `0.2`            |
 | Verde  | `C`    | `0.4`            |
 | Grigio | `G`    | `0.4`            |
+
 *Esempio di indici di dominanza per il tratto colore occhi. Nota che gli indici sommano a 1.*
 
 Nel processo di riproduzione, un valore del tratto dei genitori si trasmette al figlio, con una probabilità proporzionale alla dominanza del tratto.
