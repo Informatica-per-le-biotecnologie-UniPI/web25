@@ -434,7 +434,9 @@ Scrivi una funzione che dati `k` insertion, e `k` insertion point, li ordina per
 </div>
     
 <!--  -->
-<div class="doi ui bottom attached tab segment active" data-tab="giugno">
+<div class="doi ui bottom attached tab segment active" data-tab="giugno" markdown="1">
+
+
 
 **Consegna**: 10 giugno, ore 10:15.
 
