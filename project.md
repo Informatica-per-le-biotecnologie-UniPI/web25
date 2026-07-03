@@ -514,8 +514,8 @@ Integra i legami aromatici nella parte A e B.
 <div class="doi ui bottom attached tab segment active" data-tab="luglio" markdown="1">
     
 **Consegna**: 10/7, ore 10:00.
-
 Leggi con **massima attenzione** le linee guida prima di iniziare.
+
 	
 	<div class="ui placeholder">
         <div class="line"></div>
@@ -524,6 +524,8 @@ Leggi con **massima attenzione** le linee guida prima di iniziare.
         <div class="line"></div>
         <div class="line"></div>
     </div>
+
+	
 </div>
 
 	
