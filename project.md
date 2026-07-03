@@ -517,13 +517,13 @@ Integra i legami aromatici nella parte A e B.
 Leggi con **massima attenzione** le linee guida prima di iniziare.
 
 	
-	<div class="ui placeholder">
-        <div class="line"></div>
-        <div class="line"></div>
-        <div class="line"></div>
-        <div class="line"></div>
-        <div class="line"></div>
-    </div>
+<div class="ui placeholder">
+	<div class="line"></div>
+	<div class="line"></div>
+	<div class="line"></div>
+	<div class="line"></div>
+	<div class="line"></div>
+</div>
 
 	
 </div>
