@@ -53,8 +53,8 @@ I testi di progetto appaiono in precedenza a ogni appello. Una cheat sheet è di
     <a class="item" data-tab="marzo">Marzo</a>
     <a class="item" data-tab="aprile">Aprile</a>
     <a class="item" data-tab="maggio">Maggio</a>
-    <a class="item active" data-tab="giugno">Giugno</a>
-    <a class="item" data-tab="luglio">Luglio</a>
+    <a class="item" data-tab="giugno">Giugno</a>
+    <a class="item active" data-tab="luglio">Luglio</a>
     <a class="item" data-tab="settembre">Settembre</a>
 </div>
 <!--  -->
@@ -434,7 +434,7 @@ Scrivi una funzione che dati `k` insertion, e `k` insertion point, li ordina per
 </div>
     
 <!--  -->
-<div class="doi ui bottom attached tab segment active" data-tab="giugno" markdown="1">
+<div class="doi ui bottom attached tab segment" data-tab="giugno" markdown="1">
 
 
 
@@ -506,11 +506,18 @@ Scrivi una funzione che, dati due encoding FAME, determina se le due molecole co
 Integra i legami aromatici nella parte A e B.	
 	
 </div>
-    
+
+	
 <!--  -->
 
-<div class="doi ui bottom attached tab segment" data-tab="luglio">
-    <div class="ui placeholder">
+
+<div class="doi ui bottom attached tab segment active" data-tab="luglio" markdown="1">
+    
+**Consegna**: 10/7, ore 10:00.
+
+Leggi con **massima attenzione** le linee guida prima di iniziare.
+	
+	<div class="ui placeholder">
         <div class="line"></div>
         <div class="line"></div>
         <div class="line"></div>
@@ -518,7 +525,8 @@ Integra i legami aromatici nella parte A e B.
         <div class="line"></div>
     </div>
 </div>
-    
+
+	
 <!--  -->
 <div class="doi ui bottom attached tab segment" data-tab="settembre">
     <div class="ui placeholder">
