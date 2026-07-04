@@ -516,15 +516,75 @@ Integra i legami aromatici nella parte A e B.
 **Consegna**: 10 luglio, ore 10:00.
 Leggi con **massima attenzione** le linee guida prima di iniziare.
 
-	
-<div class="ui placeholder">
-	<div class="line"></div>
-	<div class="line"></div>
-	<div class="line"></div>
-	<div class="line"></div>
-	<div class="line"></div>
-</div>
+Nell'editing genetico, un genoma base viene modificato, aggiungendo delle sequenze predefinite, dette *insertions*, in determinati punti del genoma stesso, risultando in un *edit* del genoma. Tali inserimenti avvengono subito dopo degli specifici *insertion point*, ossia specifici punti del genoma identificati da una sequenza genetica. Un edit risulta in un unico inserimento: se un genoma presenta `> 1` insertion points, l'edit avviene solo sull'ultimo.
 
+**Esempio.**
+```python
+genome = "ACCTGCAACTGC"
+insertion_point = "CT"
+insertion = "GGGTGGG"
+```
+L'edit avviene inserendo la insertion nell'ultimo insertion points, i.e., `"ACCTGCAACTGGGTGGGGC"`
+
+Nelle seguenti, assumi un alfabeto genomico standard di basi "ACGT".
+
+---
+
+# Parte A
+*Gruppi da 1, 2, e 3 studenti*
+
+1. Scrivere una funzione che, dato un genoma di partenza, una insertion, e un insertion point, esegua l'edit del genoma.
+2. Scrivere una funzione che, dato un genoma di partenza, `k` insertion, e `k` insertion point, esegua l'edit del genoma su tutte le insertion e insertion point. Se una insertion appare `m <= k` volte tra le `k` insertion, si hanno delle *repliche*:
+   - Al primo edit viene inserita una volta
+   - Al secondo edit viene inserita due volte
+   - ...
+   - Al m-esimo edit viene inserita `m` volte
+
+**Esempio.**
+
+```python
+
+genome = "ACCGCAACGC"
+insertion_points = ["CG", "GC", "AA", "TT"]
+insertions = ["TT", "C", "TT", "GGG"]
+```
+Il primo inserimento (`"CG", "TT"`) risulta in
+```python
+"ACCGCAACGTTC"
+#         ^ inserito 1 volta
+```
+Il secondo (`"GC", "C"`) risulta in
+```python
+"ACCGCCAACGTTC"
+#     ^ inserito 1 volta
+```
+Il terzo (`"AA", "TT"`) risulta in un doppio inserimento di `"TT"`, perché appare per la seconda volta tra le insertion
+```python
+"ACCGCCAATTTTCGTTC"
+#        ^ inserito 2 volte
+```
+Il quarto (`"TT", "GGG"`) risulta in
+```python
+"ACCGCCAATTTTCGTTGGGC"
+#                ^ inserito 1 volta
+```
+Nota che gli edit sono consecutivi! Un singolo edit modifica il genoma, e potrebbe quindi creare nuovi insertion point che prima non esistevano.
+
+# Parte B
+*Gruppi da 2, e 3 studenti*
+
+1. Scrivi una funzione che "annulli" un edit da un genoma dato, i.e., dato l'insertion point e l'insertion, la vada a rimuovere dal genoma. Assumi la stessa regola di inserimento, i.e., l'edit è avvenuto solo nell'ultimo insertion point valido. Rimuovi l'insertion una sola volta, senza considerare possibili repliche.
+2. Scrivi una funzione che "annulli" una sequenza di `k` edit da un genoma dato, i.e., dati `k` insertion point e `k` insertion, le vada a rimuovere dal genoma. Considera repliche:
+   - Alla prima occorrenza di una insertion nella lista di rimozione, tenta di rimuoverla una volta
+   - Alla seconda occorrenza di una insertion nella lista di rimozione, tenta di rimuoverla due volte
+   - ...
+   - Alla `m`-esima occorrenza di una insertion nella lista di rimozione, tenta di rimuoverla `m` volte
+   Considera possibili richieste non valide: insertion point non validi, o insertion non presenti. In questi casi, la rimozione termina direttamente senza tentare le rimozioni successive.
+
+# Parte C
+*Gruppi da 3 studenti*
+
+Scrivi una funzione che dati `k` insertion, e `k` insertion point, li ordina per uno *score*. Lo score è dato da una mappa `BASE -> VALORE` che assegna un valore a ogni base. Lo score di un insertion è la media del `VALORE` di ogni base che la compone.
 	
 </div>
 
