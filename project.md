@@ -54,8 +54,8 @@ I testi di progetto appaiono in precedenza a ogni appello. Una cheat sheet è di
     <a class="item" data-tab="aprile">Aprile</a>
     <a class="item" data-tab="maggio">Maggio</a>
     <a class="item" data-tab="giugno">Giugno</a>
-    <a class="item active" data-tab="luglio">Luglio</a>
-    <a class="item" data-tab="settembre">Settembre</a>
+    <a class="item" data-tab="luglio">Luglio</a>
+    <a class="item active" data-tab="settembre">Settembre</a>
 </div>
 <!--  -->
 <div class="ui bottom attached tab segment" data-tab="linee" markdown="1">
@@ -511,7 +511,7 @@ Integra i legami aromatici nella parte A e B.
 <!--  -->
 
 
-<div class="doi ui bottom attached tab segment active" data-tab="luglio" markdown="1">
+<div class="doi ui bottom attached tab segment" data-tab="luglio" markdown="1">
     
 **Consegna**: 10 luglio, ore 10:00.
 Leggi con **massima attenzione** le linee guida prima di iniziare.
@@ -590,13 +590,7 @@ Scrivi una funzione che dati `k` insertion, e `k` insertion point, li ordina per
 
 	
 <!--  -->
-<div class="doi ui bottom attached tab segment" data-tab="settembre">
-    <div class="ui placeholder">
-        <div class="line"></div>
-        <div class="line"></div>
-        <div class="line"></div>
-        <div class="line"></div>
-        <div class="line"></div>
-    </div>
+<div class="doi ui bottom attached tab segment active" data-tab="settembre">
+    Utilizzare il testo di uno degli appelli precedenti. Scelta libera.
 </div>
     
