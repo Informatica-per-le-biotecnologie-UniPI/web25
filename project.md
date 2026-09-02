@@ -593,7 +593,7 @@ Scrivi una funzione che dati `k` insertion, e `k` insertion point, li ordina per
 <div class="doi ui bottom attached tab segment active" data-tab="settembre">
 
 	
-**Consegna**: 10 luglio, ore 10:00.
+**Consegna**: 8 settembre, ore 10:00.
 Leggi con **massima attenzione** le linee guida prima di iniziare.
 
 Utilizzare il testo di uno degli appelli precedenti. Scelta libera.
