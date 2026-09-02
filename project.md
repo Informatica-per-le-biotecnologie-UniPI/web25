@@ -590,7 +590,7 @@ Scrivi una funzione che dati `k` insertion, e `k` insertion point, li ordina per
 
 	
 <!--  -->
-<div class="doi ui bottom attached tab segment active" data-tab="settembre">
+<div class="doi ui bottom attached tab segment active" data-tab="settembre" markdown="1">
 
 	
 **Consegna**: 8 settembre, ore 10:00.
